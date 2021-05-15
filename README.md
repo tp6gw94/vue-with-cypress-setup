@@ -1,5 +1,7 @@
 # vue-with-cypress-setup
 
+> setup vye & cypress component, e2e, code-coverage env
+
 ## Project setup
 ```
 yarn install

@@ -5,22 +5,32 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve:test": "NODE_ENV=test vue-cli-service serve",
+    "cy:run-ct": "NODE_ENV=test cypress run-ct",
+    "test": "cypress run",
+    "cy:run-e2e": "start-server-and-test serve http://localhost:8080 test"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.5",
+    "@cypress/vue": "^2.2.3",
+    "@cypress/webpack-dev-server": "^1.3.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "cypress": "^7.3.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
+    "start-server-and-test": "^1.12.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -42,5 +52,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "semi": true
+  }
 }
