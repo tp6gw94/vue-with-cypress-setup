@@ -1,6 +1,6 @@
 # vue-with-cypress-setup
 
-> setup vye & cypress component, e2e, code-coverage env
+> setup vue & cypress component, e2e, code-coverage env
 
 ## Project setup
 ```
